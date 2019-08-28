@@ -1,3 +1,5 @@
+package codes
+
 /*
  * @lc app=leetcode id=53 lang=golang
  *
@@ -16,4 +18,3 @@ func maxSubArray(nums []int) int {
 	}
 	return max
 }
-

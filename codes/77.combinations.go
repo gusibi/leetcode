@@ -1,4 +1,4 @@
-// package main
+package codes
 
 // import "fmt"
 /*
@@ -7,29 +7,29 @@
  * [77] Combinations
  */
 
-func combineList(ns []int, k int)[][]int{
-	if len(ns) == k{
+func combineList(ns []int, k int) [][]int {
+	if len(ns) == k {
 		return [][]int{ns}
 	}
 	results := [][]int{}
-	for i := 0; i < len(ns); i++{
-		if k == 1{
+	for i := 0; i < len(ns); i++ {
+		if k == 1 {
 			results = append(results, []int{ns[i]})
-		}else{
-		    subResults := combineList(ns[i+1:len(ns)], k-1)
-		    for _, r := range(subResults){
-		    	result := []int{ns[i]}
-		    	result = append(result, r...)
-		    	results = append(results, result)
-		    }
+		} else {
+			subResults := combineList(ns[i+1:len(ns)], k-1)
+			for _, r := range subResults {
+				result := []int{ns[i]}
+				result = append(result, r...)
+				results = append(results, result)
+			}
 		}
 	}
 	return results
 }
 func combine(n int, k int) [][]int {
 	var ns = []int{}
-	for i := 1; i <= n ; i++{
-		ns = append(ns,i)
+	for i := 1; i <= n; i++ {
+		ns = append(ns, i)
 	}
 	return combineList(ns, k)
 }
@@ -40,4 +40,3 @@ func combine(n int, k int) [][]int {
 // 	fmt.Println(combine(4, 2))
 // 	fmt.Println(combine(4, 3))
 // }
-

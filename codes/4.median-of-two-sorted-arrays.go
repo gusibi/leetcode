@@ -1,10 +1,12 @@
+package codes
+
 /*
  * @lc app=leetcode id=4 lang=golang
  *
  * [4] Median of Two Sorted Arrays
 
  */
-// package main
+// package codes
 
 // import "fmt"
 
@@ -71,4 +73,3 @@ func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
 // 	fmt.Println(findMedianSortedArrays(nums3, nums4))
 
 // }
-

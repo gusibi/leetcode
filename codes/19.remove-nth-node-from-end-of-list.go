@@ -1,4 +1,4 @@
-package main
+package codes
 
 /*
  * @lc app=leetcode id=19 lang=golang
@@ -47,16 +47,15 @@ package main
 // 	Next *ListNode
 // }
 
-func getListLength(head *ListNode) int {
-	length := 0
-	for head != nil {
-		length++
-		head = head.Next
-	}
-	return length
-}
-
 func removeNthFromEnd(head *ListNode, n int) *ListNode {
+	getListLength := func(head *ListNode) int {
+		length := 0
+		for head != nil {
+			length++
+			head = head.Next
+		}
+		return length
+	}
 	// 1. 先判断长度，再找到节点删除
 	// 2. 使用两个指针，第一个先前进 n 步, 第二个从头开始，第一个结束时，删掉第二个指针所在位置
 	length := getListLength(head)

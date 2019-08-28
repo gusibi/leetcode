@@ -1,3 +1,5 @@
+package codes
+
 /*
  * @lc app=leetcode id=485 lang=golang
  *
@@ -20,4 +22,3 @@ func findMaxConsecutiveOnes(nums []int) int {
 	}
 	return max
 }
-

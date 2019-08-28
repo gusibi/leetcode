@@ -1,3 +1,5 @@
+package codes
+
 /*
  * @lc app=leetcode id=141 lang=golang
  *
@@ -71,6 +73,11 @@
  * }
  */
 
+type ListNode struct {
+	Val  int
+	Next *ListNode
+}
+
 func useSet(head *ListNode) bool {
 	var nodeMap map[*ListNode]int
 	nodeMap = make(map[*ListNode]int)
@@ -106,4 +113,3 @@ func useFastSlow(head *ListNode) bool {
 func hasCycle(head *ListNode) bool {
 	return useFastSlow(head)
 }
-

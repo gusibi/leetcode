@@ -1,4 +1,4 @@
-package main
+package codes
 
 import "fmt"
 
@@ -100,7 +100,7 @@ func getDepth2(node *TreeNode, depth int) int {
 	return depth
 }
 
-func getChildren(depth int, nodes []*TreeNode) ([]*TreeNode, int) {
+func getChildren1(depth int, nodes []*TreeNode) ([]*TreeNode, int) {
 	var eNodes, cNodes []*TreeNode
 	for index := range nodes {
 		node := nodes[index]

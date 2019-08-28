@@ -1,3 +1,5 @@
+package codes
+
 /*
  * @lc app=leetcode id=11 lang=golang
  *
@@ -25,4 +27,3 @@ func maxArea(height []int) int {
 	}
 	return sum
 }
-

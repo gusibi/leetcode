@@ -1,4 +1,4 @@
-// package main
+package codes
 
 // import "fmt"
 
@@ -67,7 +67,7 @@
 // 	Right *TreeNode
 // }
 
-func inOrderTraversal(p, q *TreeNode) bool {
+func inOrderTraversal1(p, q *TreeNode) bool {
 	if (p == nil && q != nil) || (p != nil && q == nil) {
 		return false
 	} else if p == nil && q == nil {
@@ -76,8 +76,8 @@ func inOrderTraversal(p, q *TreeNode) bool {
 	if p.Val != q.Val {
 		return false
 	}
-	lsame := inOrderTraversal(p.Left, q.Right)
-	rsame := inOrderTraversal(p.Right, q.Left)
+	lsame := inOrderTraversal1(p.Left, q.Right)
+	rsame := inOrderTraversal1(p.Right, q.Left)
 	if lsame && rsame {
 		return true
 	} else {
@@ -93,7 +93,7 @@ func isSymmetric(root *TreeNode) bool {
 	if root == nil {
 		return true
 	}
-	return inOrderTraversal(root.Left, root.Right)
+	return inOrderTraversal1(root.Left, root.Right)
 }
 
 // func main() {

@@ -1,3 +1,5 @@
+package codes
+
 /*
  * @lc app=leetcode id=121 lang=golang
  *
@@ -7,7 +9,7 @@
  * 比较【每天的最大获利】，取最大值即可
  */
 
-func max(nums []int) int {
+func maxItem(nums []int) int {
 	if len(nums) <= 0 {
 		return 0
 	}
@@ -22,7 +24,7 @@ func max(nums []int) int {
 func maxProfit1(prices []int) int {
 	profit := 0
 	for i := 0; i < len(prices)-1; i++ {
-		maxPrice := max(prices[i+1 : len(prices)])
+		maxPrice := maxItem(prices[i+1 : len(prices)])
 		if maxPrice-prices[i] > profit {
 			profit = maxPrice - prices[i]
 		}
@@ -46,4 +48,3 @@ func maxProfit(prices []int) int {
 	}
 	return profit
 }
-

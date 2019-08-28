@@ -1,3 +1,5 @@
+package codes
+
 /*
  * @lc app=leetcode id=215 lang=golang
  *
@@ -34,5 +36,5 @@
 func findKthLargest(nums []int, k int) int {
 	// 1. 快排，按索引取值
 	// 2. 最大堆对数组建立堆，只是需要找到第k大的数所以没有必要像直接排序方法中那样对所有数进行排序。建立好最大队后每次都提取出最大的数，提取 k 次就得到了第 k 大的数。建立最大堆的时间复杂度为O(n)，提取最大数后每次调整最大队时间复杂为O(logn)，所以总的时间复杂度为O(n+k*logn)。
+	return 0
 }
-

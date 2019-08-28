@@ -3,7 +3,7 @@
  *
  * [722] Remove Comments
  */
-package main
+package codes
 
 import (
 	"fmt"
@@ -77,11 +77,11 @@ func removeComments(source []string) []string {
 	return newSource
 }
 
-func main() {
-	// source := []string{"/*Test program */", "int main()", "{ ", "  // variable declaration ", "int a, b, c;", "/* This is a test", "   multiline  ", "   comment for ", "   testing */", "a = b + c;", "}"}
-	// removeComments(source)
-	// source := []string{"a/*comment", "line", "more_comment*/b"}
-	// removeComments(source)
-	source := []string{"struct Node{", "    /*/ declare members;/**/", "    int size;", "    /**/int val;", "};"}
-	removeComments(source)
-}
+// func main() {
+// 	// source := []string{"/*Test program */", "int main()", "{ ", "  // variable declaration ", "int a, b, c;", "/* This is a test", "   multiline  ", "   comment for ", "   testing */", "a = b + c;", "}"}
+// 	// removeComments(source)
+// 	// source := []string{"a/*comment", "line", "more_comment*/b"}
+// 	// removeComments(source)
+// 	source := []string{"struct Node{", "    /*/ declare members;/**/", "    int size;", "    /**/int val;", "};"}
+// 	removeComments(source)
+// }

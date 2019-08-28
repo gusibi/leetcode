@@ -1,3 +1,5 @@
+package codes
+
 /*
  * @lc app=leetcode id=198 lang=golang
  *
@@ -16,4 +18,3 @@ func rob(nums []int) int {
 	}
 	return currSum
 }
-

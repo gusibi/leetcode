@@ -1,3 +1,5 @@
+package codes
+
 /*
  * @lc app=leetcode id=206 lang=golang
  *
@@ -22,8 +24,8 @@
 // 	return nhead
 // }
 
-func reverseList(head *ListNode) *ListNode{
-	if head == nil || head.Next == nil{
+func reverseList(head *ListNode) *ListNode {
+	if head == nil || head.Next == nil {
 		return head
 	}
 	p := reverseList(head.Next)
@@ -31,4 +33,3 @@ func reverseList(head *ListNode) *ListNode{
 	head.Next = nil
 	return p
 }
-

@@ -1,4 +1,4 @@
-// package main
+package codes
 
 /*
  * @lc app=leetcode id=5 lang=golang
@@ -17,14 +17,14 @@
  * Output: "bb"
  */
 
-func max(a, b int) int {
-	if a >= b {
-		return a
-	} else {
-		return b
-	}
-}
 func longestPalindrome(s string) string {
+	max := func(a, b int) int {
+		if a >= b {
+			return a
+		} else {
+			return b
+		}
+	}
 	if len(s) < 1 {
 		return s
 	}

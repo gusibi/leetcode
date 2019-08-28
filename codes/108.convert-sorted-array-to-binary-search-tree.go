@@ -1,3 +1,5 @@
+package codes
+
 /*
  * @lc app=leetcode id=108 lang=golang
  *
@@ -55,4 +57,3 @@ func sortedArrayToBST(nums []int) *TreeNode {
 	node.Right = right
 	return &node
 }
-

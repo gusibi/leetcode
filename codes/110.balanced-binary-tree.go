@@ -1,3 +1,5 @@
+package codes
+
 import "math"
 
 /*
@@ -64,20 +66,20 @@ import "math"
  * }
  */
 
-func getDepth(node *TreeNode) float64 {
+func getDepth0(node *TreeNode) float64 {
 	// depth 为node 节点的深度
 	if node == nil {
 		return 0.0
 	}
-	return math.Max(getDepth(node.Left), getDepth(node.Right)) + 1
+	return math.Max(getDepth0(node.Left), getDepth0(node.Right)) + 1
 }
 
 func isBalanced(root *TreeNode) bool {
 	if root == nil {
 		return true
 	}
-	ldepth := getDepth(root.Left)
-	rdepth := getDepth(root.Right)
+	ldepth := getDepth0(root.Left)
+	rdepth := getDepth0(root.Right)
 	diff := math.Abs(ldepth - rdepth)
 	if diff > 1 {
 		return false

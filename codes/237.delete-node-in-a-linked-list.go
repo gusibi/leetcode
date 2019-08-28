@@ -1,3 +1,5 @@
+package codes
+
 /*
  * @lc app=leetcode id=237 lang=golang
  *
@@ -67,4 +69,3 @@ func deleteNode(node *ListNode) {
 		node.Next = nil
 	}
 }
-

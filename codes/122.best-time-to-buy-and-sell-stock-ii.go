@@ -1,3 +1,5 @@
+package codes
+
 /*
  * @lc app=leetcode id=122 lang=golang
  *
@@ -6,14 +8,14 @@
 
 import "math"
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	} else {
-		return b
+func maxProfit2(prices []int) int {
+	max := func(a, b int) int {
+		if a > b {
+			return a
+		} else {
+			return b
+		}
 	}
-}
-func maxProfit(prices []int) int {
 	// profit0 表示 当前没有持有的收益
 	// profit1 表示 当前持有的收益 负无穷是初始值
 	profit0, profit1 := 0, int(math.Inf(-1))
@@ -27,4 +29,3 @@ func maxProfit(prices []int) int {
 	// 最后的状态需要是未持有收益最大所以
 	return profit0
 }
-

@@ -1,3 +1,5 @@
+package codes
+
 import "fmt"
 
 /*
@@ -61,4 +63,3 @@ func intToRoman(num int) string {
 	}
 	return result
 }
-

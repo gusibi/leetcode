@@ -1,3 +1,5 @@
+package codes
+
 /*
  * @lc app=leetcode id=75 lang=golang
  *
@@ -36,4 +38,3 @@ func sortColors(nums []int) []int {
 	}
 	return nums
 }
-

@@ -1,4 +1,5 @@
-// package main
+package codes
+
 // import "fmt"
 /*
  * @lc app=leetcode id=148 lang=golang
@@ -14,8 +15,8 @@
  */
 // nlog(n) 归并排序和快速排序
 // type ListNode struct {
-//     Val int
-//     Next *ListNode
+// 	Val  int
+// 	Next *ListNode
 // }
 
 // func partition(A []int, p, r int) int{
@@ -30,8 +31,6 @@
 // 	A[i], A[r] = A[r], A[i]
 // 	return i
 // }
-
-
 
 // func quickSort(A []int, p, r int) []int {
 // 	if p >= r {
@@ -71,39 +70,39 @@
 // 	return results
 // }
 
-func mergeList(left, right *ListNode) *ListNode{
+func mergeList(left, right *ListNode) *ListNode {
 	var curr, p, head *ListNode
-	for left != nil && right != nil{
+	for left != nil && right != nil {
 		p = curr
-		if left.Val <= right.Val{
+		if left.Val <= right.Val {
 			curr = left
 			left = left.Next
-		}else{
+		} else {
 			curr = right
 			right = right.Next
 		}
-		if head == nil{
+		if head == nil {
 			head = curr
 		}
-		if p!=nil{
+		if p != nil {
 			p.Next = curr
 		}
 	}
-	if left != nil{
+	if left != nil {
 		curr.Next = left
-	}else if right != nil{
+	} else if right != nil {
 		curr.Next = right
 	}
 	return head
 }
 
 func sortList(head *ListNode) *ListNode {
-	if head == nil || head.Next == nil{
+	if head == nil || head.Next == nil {
 		return head
 	}
 	sp := &ListNode{}
 	slow, fast := head, head
-	for fast != nil && fast.Next != nil{
+	for fast != nil && fast.Next != nil {
 		// fmt.Println("fast: ", fast, "slow: ", slow)
 		fast = fast.Next.Next
 		sp = slow
@@ -148,4 +147,3 @@ func sortList(head *ListNode) *ListNode {
 // 	shead := sortList(head)
 // 	printList(shead)
 // }
-

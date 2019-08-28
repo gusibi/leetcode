@@ -1,4 +1,5 @@
-// package main
+package codes
+
 // import (
 // 	"fmt"
 // 	"time"
@@ -16,34 +17,30 @@
  * }
  */
 
-// type ListNode struct {
-//     Val int
-//     Next *ListNode
-// }
-func insertNode(head, unhead *ListNode) *ListNode{
+func insertNode(head, unhead *ListNode) *ListNode {
 	newHead := head
-	if head == unhead{
+	if head == unhead {
 		head.Next = nil
-	    return newHead
+		return newHead
 	}
 	// fmt.Println("-----------sort....: ", head, unhead)
 	pre := &ListNode{}
 	curr, newHead := head, head
-	for curr!= unhead{
+	for curr != unhead {
 		// fmt.Println(curr, unhead)
-		if curr.Val <= unhead.Val{
-		    if curr.Next == nil{
-		    	curr.Next = unhead
-		    	unhead.Next = nil
-		    	break
-		    }
+		if curr.Val <= unhead.Val {
+			if curr.Next == nil {
+				curr.Next = unhead
+				unhead.Next = nil
+				break
+			}
 			pre = curr
 			curr = curr.Next
-		}else{
+		} else {
 			unhead.Next = curr
-			if pre.Next != nil{
+			if pre.Next != nil {
 				pre.Next = unhead
-			}else{
+			} else {
 				newHead = unhead
 			}
 			break
@@ -56,7 +53,7 @@ func insertionSortList(head *ListNode) *ListNode {
 	// 分两部分，前边为已排序，后边为未排序
 	unhead := head
 	// fmt.Println(head, unhead)
-	for unhead != nil{
+	for unhead != nil {
 		// fmt.Println("unhead:", unhead)
 		next := unhead.Next
 		head = insertNode(head, unhead)
@@ -84,4 +81,3 @@ func insertionSortList(head *ListNode) *ListNode {
 // 		time.Sleep(time.Duration(1)*time.Second)
 // 	}
 // }
-

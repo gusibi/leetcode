@@ -1,3 +1,5 @@
+package codes
+
 /*
  * @lc app=leetcode id=9 lang=golang
  *
@@ -8,7 +10,7 @@ func divmod(m, n int) (int, int) {
 	return m / n, m % n
 }
 
-func isPalindrome(x int) bool {
+func isPalindrome9(x int) bool {
 	if x == 0 {
 		return true
 	} else if x < 0 || x%10 == 0 {
@@ -27,4 +29,3 @@ func isPalindrome(x int) bool {
 	}
 	return false
 }
-

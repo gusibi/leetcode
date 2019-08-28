@@ -1,18 +1,20 @@
+package codes
+
 /*
  * @lc app=leetcode id=275 lang=golang
  *
  * [275] H-Index II
  */
-func hIndex1(citations []int) int {
-	for i, n:= 0, len(citations); i<n; i++{
-		if citations[i] >= n - i{
-			return n-i
+func hIndex5(citations []int) int {
+	for i, n := 0, len(citations); i < n; i++ {
+		if citations[i] >= n-i {
+			return n - i
 		}
 	}
-	return 0 
+	return 0
 }
 
-func hIndex(citations []int) int {
+func hIndex75(citations []int) int {
 	n := len(citations)
 
 	low := 0
@@ -31,4 +33,3 @@ func hIndex(citations []int) int {
 
 	return n - low
 }
-

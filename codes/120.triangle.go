@@ -1,3 +1,5 @@
+package codes
+
 /*
  * @lc app=leetcode id=120 lang=golang
  *
@@ -29,4 +31,3 @@ func minimumTotal(triangle [][]int) int {
 	}
 	return triangle[0][0]
 }
-

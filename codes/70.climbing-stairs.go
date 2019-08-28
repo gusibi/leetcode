@@ -1,3 +1,5 @@
+package codes
+
 /*
  * @lc app=leetcode id=70 lang=golang
  *
@@ -27,4 +29,3 @@ func climbStairs(n int) int {
 	}
 	return left + right
 }
-
